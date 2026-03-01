@@ -1,0 +1,57 @@
+{
+  "name": "Clone - Социальная сеть",
+  "short_name": "Clone",
+  "description": "Многопользовательская социальная сеть Clone",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#8b5cf6",
+  "orientation": "portrait",
+  "scope": "/",
+  "lang": "ru",
+  "categories": ["social", "network"],
+  "icons": [
+    {
+      "src": "/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Создать пост",
+      "short_name": "Пост",
+      "description": "Создать новую публикацию",
+      "url": "/?action=create-post",
+      "icons": [{ "src": "/icon-192x192.png", "sizes": "192x192", "type": "image/png" }]
+    },
+    {
+      "name": "Сообщения",
+      "short_name": "Чаты",
+      "description": "Открыть чаты",
+      "url": "/?action=chats",
+      "icons": [{ "src": "/icon-192x192.png", "sizes": "192x192", "type": "image/png" }]
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshots/desktop-1.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Главная лента Clone"
+    },
+    {
+      "src": "/screenshots/mobile-1.png",
+      "sizes": "375x667",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Мобильная версия Clone"
+    }
+  ]
+}

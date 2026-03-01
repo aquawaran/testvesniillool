@@ -1,0 +1,303 @@
+/* PWA стили */
+
+/* Баннер установки */
+.install-banner {
+    position: fixed;
+    top: -100px;
+    left: 0;
+    right: 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    z-index: 10000;
+    transition: top 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.install-banner.show {
+    top: 0;
+}
+
+.install-banner-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+    max-width: 100%;
+}
+
+.install-banner-info {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.install-banner-icon {
+    font-size: 24px;
+    margin-right: 12px;
+}
+
+.install-banner-text strong {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 2px;
+}
+
+.install-banner-text div {
+    font-size: 12px;
+    opacity: 0.9;
+}
+
+.install-banner-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.install-banner-btn {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.install-banner-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-1px);
+}
+
+.install-banner-close {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 4px;
+    transition: background 0.2s ease;
+}
+
+.install-banner-close:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Уведомление об обновлении */
+.update-notification {
+    position: fixed;
+    top: 60px;
+    right: 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 12px 16px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    z-index: 10000;
+    animation: slideInRight 0.3s ease;
+}
+
+.update-notification-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.update-btn {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.update-close {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 2px;
+}
+
+/* Уведомление об успешной установке */
+.install-success-notification {
+    position: fixed;
+    top: 60px;
+    right: 20px;
+    background: linear-gradient(135deg, #4ade80 0%, #22c55e 100%);
+    color: white;
+    padding: 12px 16px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    z-index: 10000;
+    animation: slideInRight 0.3s ease;
+}
+
+.install-success-content {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* PWA секция в настройках */
+.pwa-features {
+    margin-top: 8px;
+    padding: 8px;
+    background: rgba(139, 92, 246, 0.1);
+    border-radius: 6px;
+    border-left: 3px solid #8b5cf6;
+}
+
+.pwa-features small {
+    color: #6b7280;
+    line-height: 1.4;
+}
+
+/* Инструкции по установке */
+.install-instructions,
+.uninstall-instructions {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.instruction-step {
+    margin-bottom: 16px;
+    padding: 12px;
+    background: #f8fafc;
+    border-radius: 6px;
+    border-left: 3px solid #8b5cf6;
+}
+
+.instruction-step strong {
+    color: #8b5cf6;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.instruction-step ol {
+    margin: 8px 0 0 20px;
+    padding: 0;
+}
+
+.instruction-step li {
+    margin-bottom: 4px;
+    color: #4b5563;
+    font-size: 14px;
+}
+
+.instruction-step p {
+    margin: 8px 0 0 0;
+    color: #4b5563;
+    font-size: 14px;
+}
+
+/* Анимации */
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Мобильная адаптация */
+@media (max-width: 768px) {
+    .install-banner-content {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+    }
+    
+    .install-banner-info {
+        justify-content: center;
+    }
+    
+    .install-banner-text strong {
+        font-size: 13px;
+    }
+    
+    .install-banner-text div {
+        font-size: 11px;
+    }
+    
+    .update-notification,
+    .install-success-notification {
+        left: 10px;
+        right: 10px;
+        top: 70px;
+    }
+    
+    .update-notification-content,
+    .install-success-content {
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+/* Адаптация для PWA режима */
+@media (display-mode: standalone) {
+    .install-banner {
+        display: none !important;
+    }
+    
+    #pwaInstallBtn {
+        display: none !important;
+    }
+    
+    #pwaStatusText::before {
+        content: "✅ ";
+        color: #22c55e;
+    }
+}
+
+/* Поддержка темной темы */
+@media (prefers-color-scheme: dark) {
+    .instruction-step {
+        background: #1f2937;
+        color: #f3f4f6;
+    }
+    
+    .instruction-step li,
+    .instruction-step p {
+        color: #d1d5db;
+    }
+    
+    .pwa-features {
+        background: rgba(139, 92, 246, 0.2);
+    }
+    
+    .pwa-features small {
+        color: #d1d5db;
+    }
+}
+
+/* Оформление для iOS Safari */
+@supports (-webkit-touch-callout: none) {
+    .install-banner {
+        padding-top: env(safe-area-inset-top);
+    }
+    
+    .install-banner-content {
+        padding-left: calc(16px + env(safe-area-inset-left));
+        padding-right: calc(16px + env(safe-area-inset-right));
+    }
+}
